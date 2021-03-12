@@ -35,7 +35,7 @@ public class JasperReportsServiceImpl implements JasperReportsService {
 
 	@Override
 	public JasperPrint compileReportJasper(ByteArrayOutputStream fileByte, String orderID) throws ClassNotFoundException, SQLException, JRException, IOException {
-		InputStream imageInputStream = this.getClass().getClassLoader().getResourceAsStream("images/leaf_banner_violet.png");
+		InputStream imageInputStream = this.getClass().getClassLoader().getResourceAsStream("images/Bill.png");
 		Map<String, Object> map = new HashMap<>();
 		map.put("orderID", orderID);
 		map.put("image", imageInputStream);

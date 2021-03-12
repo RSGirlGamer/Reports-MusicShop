@@ -68,6 +68,7 @@ public class DropboxAPIServiceImpl implements DropboxAPIService {
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
 		} catch (JRException e) {
 			System.out.println(e.getCause());
+			System.out.println(e.getMessage());
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
 		}
 		return Response.status(Response.Status.OK).entity(message).build();
